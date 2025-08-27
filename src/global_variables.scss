@@ -1,0 +1,60 @@
+:root {
+  /* MAIN SYSTEM COLORS */
+  --red: #dc3545;
+  --red-hover: #bb2d3b;
+  --boston-university-red: #cc0000;
+  --cerulean-blue: #3b4cca;
+  --golden-yellow: #ffde00;
+  --golden-foil: #b3a125;
+  --border-gray: #cbcbcb;
+  --green: #198754;
+  --green-hover: #157347;
+  --blue: #0d6efd;
+  --blue-hover: #0b5ed7;
+  --gray-border: #ced4da;
+
+  /* THEMED COLORS */
+  --cultured: #f8f8f8;
+  --pokeball-black: #010101;
+  --pokeball-white: #fff;
+  --pokeball-red: #eb2127;
+  --container-gray: rgba(0, 0, 0, 0.03);
+  --container-gray-border: rgba(0, 0, 0, 0.175);
+
+  /* POKEMON TYPE COLORS */
+  --normal: #a8a77a;
+  --fire: #ee8130;
+  --water: #6390f0;
+  --electric: #f7d02c;
+  --grass: #7ac74c;
+  --ice: #96d9d6;
+  --fighting: #c22e28;
+  --poison: #a33ea1;
+  --ground: #e2bf65;
+  --flying: #a98ff3;
+  --psychic: #f95587;
+  --bug: #a6b91a;
+  --rock: #b6a136;
+  --ghost: #735797;
+  --dragon: #6f35fc;
+  --dark: #705746;
+  --steel: #b7b7ce;
+  --fairy: #d685ad;
+
+  /* BG COLORS */
+  --bg-gray: #f8f9fa;
+  --bg-blue: #3890d8;
+  --bg-blue-light: #80c0d8;
+  --bg-blue-hover: #78d0e8;
+  --bg-blue-light-hover: #a8e8f8;
+
+  /* BEHAVIOR COLORS */
+  --disabled: #6c757d;
+
+  /* FONTS */
+  --x-small: 12px;
+  --small: 14px;
+  --medium: 16px;
+  --large: 18px;
+  --x-large: 20px;
+}

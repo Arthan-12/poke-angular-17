@@ -1,0 +1,52 @@
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        red: "var(--red)",
+        redHover: "var(--red-hover)",
+        bostonUniversityRed: "var(--boston-university-red)",
+        ceruleanBlue: "var(--cerulean-blue)",
+        goldenYellow: "var(--golden-yellow)",
+        goldenFoil: "var(--golden-foil)",
+        green: "var(--green)",
+        greenHover: "var(--green-hover)",
+        blue: "var(--blue)",
+        blueHover: "var(--blue-hover)",
+        pokeball: {
+          black: "var(--pokeball-black)",
+          white: "var(--pokeball-white)",
+          red: "var(--pokeball-red)",
+        },
+        pokemon: {
+          normal: "var(--normal)",
+          fire: "var(--fire)",
+          water: "var(--water)",
+          electric: "var(--electric)",
+          grass: "var(--grass)",
+          ice: "var(--ice)",
+          fighting: "var(--fighting)",
+          poison: "var(--poison)",
+          ground: "var(--ground)",
+          flying: "var(--flying)",
+          psychic: "var(--psychic)",
+          bug: "var(--bug)",
+          rock: "var(--rock)",
+          ghost: "var(--ghost)",
+          dragon: "var(--dragon)",
+          dark: "var(--dark)",
+          steel: "var(--steel)",
+          fairy: "var(--fairy)",
+        },
+        disabled: "var(--disabled)",
+      },
+      fontSize: {
+        xs: "var(--x-small)",
+        sm: "var(--small)",
+        base: "var(--medium)",
+        lg: "var(--large)",
+        xl: "var(--x-large)",
+      },
+    },
+  },
+};
