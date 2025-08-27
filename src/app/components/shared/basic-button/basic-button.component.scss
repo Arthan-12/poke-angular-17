@@ -1,0 +1,84 @@
+@import "global_variables";
+.button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  min-width: 140px;
+  height: 36px;
+  color: $pokeball-white;
+  font-size: $medium;
+  padding: 2px 4px;
+  border-radius: 6px;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    .title {
+      cursor: pointer;
+    }
+  }
+
+  // BUTTON COLORS
+
+  &.green {
+    background-color: $green;
+  }
+
+  &:hover.green {
+    background-color: $green-hover;
+  }
+
+  &.blue {
+    background-color: $blue;
+  }
+
+  &:hover.blue {
+    background-color: $blue-hover;
+  }
+
+  &.cerulean {
+    background-color: $cerulean-blue;
+  }
+
+  &:hover.cerulean {
+    background-color: $bg-blue;
+  }
+
+  &.red {
+    background-color: $red;
+  }
+
+  &:hover.red {
+    background-color: $red-hover;
+  }
+
+  // BUTTON SIZES
+
+  &.small {
+    width: 140px;
+  }
+
+  &.medium {
+    width: 290px;
+  }
+
+  &:disabled {
+    cursor: default;
+    background-color: $disabled;
+    opacity: 0.5;
+    .content {
+      .title {
+        cursor: default;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .button {
+    width: 290px;
+  }
+}

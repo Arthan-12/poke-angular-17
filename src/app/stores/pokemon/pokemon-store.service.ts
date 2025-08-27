@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Pokemon } from 'src/app/api/models/pokemon-model';
+import { Pokemon } from '../../api/models/pokemon-model';
 
 @Injectable({
   providedIn: 'root',

@@ -1,0 +1,38 @@
+@import "global_variables.scss";
+
+.navbar {
+  background-color: $bg-gray;
+  .container {
+    margin-left: 32px;
+
+    .routes {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 16px;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        font-size: $medium;
+        gap: 8px;
+
+        .pokeball {
+          width: 30px;
+          height: 30px;
+        }
+
+        .title {
+          font-size: $large;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $pokeball-black;
+}
