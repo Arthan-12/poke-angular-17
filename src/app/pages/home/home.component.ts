@@ -3,14 +3,27 @@ import { Subscription } from 'rxjs';
 import { Pokemon } from '../../api/models/pokemon-model';
 import { ErrorService } from '../../api/services/error/error.service';
 import { PokemonService } from '../../api/services/pokemon/pokemon.service';
+import { PokemonCardComponent } from '../../components/home/pokemon-card/pokemon-card.component';
 import { BasicButtonComponent } from '../../components/shared/basic-button/basic-button.component';
+import { NotFoundPlaceholderComponent } from '../../components/shared/basic-button/not-found-placeholder/not-found-placeholder.component';
+import { PokeballLoaderComponent } from '../../components/shared/basic-button/pokeball-loader/pokeball-loader.component';
+import { PokeballPlaceholderComponent } from '../../components/shared/basic-button/pokeball-placeholder/pokeball-placeholder.component';
+import { PokemonSearchInputComponent } from '../../components/shared/basic-button/pokemon-search-input/pokemon-search-input.component';
 import { PokemonStoreService } from '../../stores/pokemon/pokemon-store.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BasicButtonComponent],
+  imports: [
+    BasicButtonComponent,
+    PokemonSearchInputComponent,
+    PokemonCardComponent,
+    PokeballPlaceholderComponent,
+    NotFoundPlaceholderComponent,
+    PokeballLoaderComponent,
+  ],
   templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
   searchInputTitle = 'Search for a Pokémon!';

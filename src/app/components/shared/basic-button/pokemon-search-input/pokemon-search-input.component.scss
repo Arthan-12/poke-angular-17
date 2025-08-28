@@ -1,0 +1,47 @@
+@import "global_variables.scss";
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+
+  .input-label {
+    padding-bottom: 8px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .input {
+      min-width: 15rem;
+      max-width: 15rem;
+      height: 40px;
+      border-radius: 6px;
+      border: 1px solid $gray-border;
+      padding: 6px 12px;
+      line-height: 1.5;
+
+      &.error {
+        border-color: $pokeball-red;
+      }
+    }
+
+    .reset-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      width: 32px;
+      height: 28px;
+      border-radius: 6px;
+      color: $pokeball-red;
+
+      &.disabled {
+        cursor: default;
+        color: $disabled;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<section class="pokemon-container">
+  <h5>My Pokémon Squad</h5>
+  @if (pokemonSquadList.length === 0) {
+  <span class="empty-squad-placeholder-text">
+    Select Pokémons to create your squad!
+  </span>
+  }
+  <div
+    class="pokemon-list-container"
+    cdkDropList
+    (cdkDropListDropped)="drop($event)"
+  >
+    <ul>
+      @for(pokemon of pokemonSquadList; let i = $index; track pokemon) {
+      <li
+        cdkDrag
+        class="pokemon-drop-list-item"
+        [ngClass]="[
+          i === 0 ? 'first' : '',
+          i === selectedPokemonIndex ? 'selected' : ''
+        ]"
+      >
+        <div class="list-item-first-box">
+          <img class="pokemon-sprite" [src]="pokemon.sprites.front_default" />
+          <span class="pokemon-info"
+            >{{ pokemon?.name }} - {{ pokemon?.id }}</span
+          >
+        </div>
+        <div class="list-item-second-box">
+          <div class="content">
+            <div class="pokemon-types">
+              @for(pokemonType of pokemon.types; track pokemonType) {
+              <app-pokemon-type-badge
+                [pokemonType]="pokemonType.type.name"
+              ></app-pokemon-type-badge>
+              }
+            </div>
+          </div>
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+  <div class="buttons-area">
+    @if (pokemonSquadList.length > 0) {
+    <app-basic-button
+      color="red"
+      size="medium"
+      btnTitle="Clear Pokémon Squad"
+      (click)="clearAllPokemonSquad()"
+    />
+    }
+  </div>
+</section>

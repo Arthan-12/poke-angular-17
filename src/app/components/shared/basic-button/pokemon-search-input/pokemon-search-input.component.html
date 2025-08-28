@@ -1,0 +1,22 @@
+<div class="input-container">
+  <label class="input-label">{{ inputTitle }}</label>
+  <div class="content">
+    <input
+      class="input"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="emitInputValue()"
+      (keyup)="keyboardValidation($event)"
+      [placeholder]="placeholder"
+      required
+      [ngClass]="inputValue.errors?.['required'] && inputValue.dirty && inputValue.touched ? 'error' : ''"
+      #inputValue="ngModel"
+    />
+    <button
+      class="reset-button"
+      [disabled]="searchTerm?.length === 0 || !searchTerm"
+      (click)="inputValue.reset()"
+      (click)="resetValueEmitter()"
+      [ngClass]="searchTerm?.length === 0 || !searchTerm ? 'disabled' : ''"
+    ></button>
+  </div>
+</div>

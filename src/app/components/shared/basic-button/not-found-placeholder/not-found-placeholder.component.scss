@@ -1,0 +1,20 @@
+@import "global_variables.scss";
+
+.placeholder-container {
+  border-radius: 8px;
+  background-color: $pokeball-white;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+
+  .not-found-sprite {
+    width: 124px;
+    height: 144px;
+  }
+
+  .not-found-text {
+  }
+}

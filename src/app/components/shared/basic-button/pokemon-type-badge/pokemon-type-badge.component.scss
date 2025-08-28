@@ -1,0 +1,75 @@
+@import "global_variables.scss";
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-align: center;
+  text-transform: uppercase;
+
+  // COLORS
+
+  &.normal {
+    background-color: $normal;
+  }
+  &.fire {
+    background-color: $fire;
+  }
+  &.water {
+    background-color: $water;
+  }
+  &.electric {
+    background-color: $electric;
+  }
+  &.grass {
+    background-color: $grass;
+  }
+  &.ice {
+    background-color: $ice;
+  }
+  &.fighting {
+    background-color: $fighting;
+  }
+  &.poison {
+    background-color: $poison;
+  }
+  &.ground {
+    background-color: $ground;
+  }
+  &.flying {
+    background-color: $flying;
+  }
+  &.psychic {
+    background-color: $psychic;
+  }
+  &.bug {
+    background-color: $bug;
+  }
+  &.rock {
+    background-color: $rock;
+  }
+  &.ghost {
+    background-color: $ghost;
+  }
+  &.dragon {
+    background-color: $dragon;
+  }
+  &.dark {
+    background-color: $dark;
+  }
+  &.steel {
+    background-color: $steel;
+  }
+  &.fairy {
+    background-color: $fairy;
+  }
+
+  // SIZE
+
+  &.x-small {
+    font-size: $x-small;
+  }
+
+  &.small {
+    font-size: $small;
+  }
+}

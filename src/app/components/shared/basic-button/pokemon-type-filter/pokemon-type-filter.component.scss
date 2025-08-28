@@ -1,0 +1,30 @@
+@import "global_variables.scss";
+
+.filter-container {
+  .filter-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $bg-blue-hover;
+      border-radius: 8px;
+      color: $pokeball-white;
+    }
+  }
+
+  .filter-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    &.hide {
+      display: none;
+    }
+
+    .filter-type {
+      display: flex;
+      gap: 4px;
+    }
+  }
+}

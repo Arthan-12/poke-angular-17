@@ -1,2 +1,46 @@
-<p>home works!</p>
-<app-basic-button btnTitle="click" color="cerulean"></app-basic-button>
+<section class="home-container">
+  <h1 class="welcome-text">{{ welcomeText }}</h1>
+  <div class="pokemon-search">
+    <app-pokemon-search-input
+      [inputTitle]="searchInputTitle"
+      (inputEmitter)="getTypedValue($event)"
+      (resetEmitter)="getInputReset($event)"
+      (keyboardEmitter)="getKeyboardEvent($event)"
+    ></app-pokemon-search-input>
+    <div class="action-buttons">
+      <app-basic-button
+        [isBtnDisabled]="inputValue.length === 0"
+        (click)="searchPokemon()"
+        btnTitle="Search Pokémon!"
+        [color]="inputValue.length === 0 ? 'default' : 'green'"
+      ></app-basic-button>
+    </div>
+  </div>
+  <div class="pokemon-card" id="pokemonCard">
+    @if(searchedPokemon && !pokemonSearchLoading && !showNotFoundPlaceholder) {
+    <app-pokemon-card
+      [pokemon]="searchedPokemon"
+      (selectPokemonEvent)="selectPokemonEvent($event)"
+    />
+    }
+    <div class="catch-pokemon-btn">
+      @if(isPokemonSelected) {
+      <app-basic-button
+        (click)="catchPokemon()"
+        btnTitle="Catch Pokémon!"
+        color="cerulean"
+      />
+      }
+    </div>
+    @if( pokemonSearchLoading ) {
+    <app-pokeball-loader />
+    } @if ( !searchedPokemon && !pokemonSearchLoading &&
+    !showNotFoundPlaceholder ) {
+    <app-pokeball-placeholder />
+    } @if ( showNotFoundPlaceholder && !pokemonSearchLoading ) {
+    <app-not-found-placeholder
+      notFoundPlaceholderText="Ooops! Couldn't find any Pokémon with this name :("
+    />
+    }
+  </div>
+</section>

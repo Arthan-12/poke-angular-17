@@ -1,1 +1,7 @@
-<p>my-team works!</p>
+<section class="my-team-container">
+  <app-my-team-box
+    [capturedPokemonList]="capturedPokemonList"
+    [pokemonSquadList]="pokemonSquadList"
+  ></app-my-team-box>
+  <app-my-squad-box [pokemonSquadList]="pokemonSquadList"> </app-my-squad-box>
+</section>

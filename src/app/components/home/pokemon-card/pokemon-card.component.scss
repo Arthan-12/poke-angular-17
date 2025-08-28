@@ -1,0 +1,34 @@
+@import "global_variables.scss";
+
+.card {
+  width: 18rem;
+
+  .card-body {
+    background-color: $container-gray;
+
+    .card-title {
+      text-align: center;
+      text-transform: capitalize;
+      color: $cerulean-blue;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  &.selected {
+    border: 2px solid $boston-university-red;
+  }
+
+  &:hover.selected {
+    border: 2px solid $boston-university-red;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $cerulean-blue;
+  }
+}

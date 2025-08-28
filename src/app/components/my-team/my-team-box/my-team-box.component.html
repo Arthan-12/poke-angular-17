@@ -1,0 +1,52 @@
+<section class="pokemon-container">
+  <h5>My captured Pokémon</h5>
+  <app-pokemon-search-input
+    inputTitle="Search for a captured Pokémon"
+    (inputEmitter)="getTypedValue($event)"
+    (resetEmitter)="getInputReset($event)"
+    (keyboardEmitter)="getKeyboardEvent($event)"
+  ></app-pokemon-search-input>
+  <app-pokemon-type-filter
+    (selectedTypeList)="getFilteredTypes($event)"
+  ></app-pokemon-type-filter>
+  <div class="pokemon-list-container">
+    <ul>
+      @for(pokemon of filterPokemonByInput(); let i = $index; track pokemon) {
+      <li
+        class="captured-pokemon"
+        [ngClass]="[
+          i === 0 ? 'first' : '',
+          i === selectedPokemonIndex && !disabledSelectedPokemon(pokemon)
+            ? 'selected'
+            : '',
+          showPokemonByFilteredType(pokemon) ? 'hide' : ''
+        ]"
+        (click)="selectPokemon(pokemon, i)"
+      >
+        <div class="list-item-content">
+          <span
+            class="pokemon-info"
+            [ngClass]="disabledSelectedPokemon(pokemon) ? 'disabled' : ''"
+            >{{ pokemon?.id }} - {{ pokemon?.name }}</span
+          >
+          @if(i === selectedPokemonIndex && !disabledSelectedPokemon(pokemon)) {
+          <div class="action-buttons"></div>
+          } @if (disabledSelectedPokemon(pokemon)) {
+          <span class="selected-badge"> selected </span>
+          }
+        </div>
+      </li>
+      }
+    </ul>
+  </div>
+  <div class="buttons-area">
+    @if (capturedPokemonList.length > 0) {
+    <app-basic-button
+      color="red"
+      size="medium"
+      btnTitle="Release all captured Pokémon"
+      (click)="releaseAllCapturedPokemon()"
+    />
+    }
+  </div>
+</section>

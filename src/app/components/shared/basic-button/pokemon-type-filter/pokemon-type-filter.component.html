@@ -1,0 +1,19 @@
+<div class="filter-container">
+  <div class="filter-title" (click)="isFilterOpenend = !isFilterOpenend">
+    <span>Filter by type</span>
+  </div>
+  <div class="filter-content" [ngClass]="!isFilterOpenend ? 'hide' : ''">
+    @for(type of pokemonTypes; track type) {
+    <div class="filter-type">
+      <input
+        type="checkbox"
+        (click)="toggleType(type)"
+        [checked]="selectedValues.isSelected(type)"
+      /><app-pokemon-type-badge
+        [pokemonType]="type"
+        size="x-small"
+      ></app-pokemon-type-badge>
+    </div>
+    }
+  </div>
+</div>

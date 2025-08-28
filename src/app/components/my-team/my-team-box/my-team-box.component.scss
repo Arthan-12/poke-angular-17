@@ -1,0 +1,82 @@
+@import "global_variables.scss";
+
+.pokemon-container {
+  width: 300px;
+  min-height: 306px;
+  border-radius: 8px;
+  padding: 8px;
+  border: 1px solid $bg-blue;
+  display: flex;
+  flex-direction: column;
+
+  .pokemon-list-container {
+    .captured-pokemon {
+      text-transform: uppercase;
+      padding: 8px 16px;
+      margin-bottom: 4px;
+      border: 1px solid $gray-border;
+      border-radius: 8px;
+
+      &.hide {
+        display: none;
+      }
+
+      &.first {
+        margin-top: 16px;
+      }
+
+      &.selected {
+        cursor: pointer;
+        background-color: $blue;
+        color: $pokeball-white;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: $bg-blue;
+        color: $pokeball-white;
+      }
+
+      .list-item-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .pokemon-info {
+          &.disabled {
+            color: $disabled;
+          }
+        }
+
+        .action-buttons {
+          display: flex;
+          gap: 8px;
+
+          .add-btn {
+          }
+
+          .delete-btn {
+          }
+        }
+
+        .selected-badge {
+          padding: 4px;
+          border-radius: 8px;
+          background-color: $green;
+          color: $pokeball-white;
+          font-size: $x-small;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+
+  .buttons-area {
+    margin-top: auto;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

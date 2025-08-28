@@ -1,0 +1,17 @@
+<div
+  class="card"
+  (click)="selectPokemon()"
+  [ngClass]="isPokemonSelected ? 'selected' : ''"
+>
+  <img class="card-img-top" [src]="pokemonSprite" />
+  <div class="card-body">
+    <h5 class="card-title">{{ pokemon?.name }}</h5>
+  </div>
+  <div class="card-footer">
+    @for (pokemonType of pokemon?.types; track pokemonType) {
+    <app-pokemon-type-badge
+      [pokemonType]="pokemonType.type.name"
+    ></app-pokemon-type-badge>
+    }
+  </div>
+</div>
